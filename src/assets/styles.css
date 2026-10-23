@@ -1,0 +1,289 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+    font-family: 'Inter', Arial, sans-serif;
+
+    color: #102A43;
+    background: #FFFFFF;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+
+    /* CCS Elite Blue + Volt Lime Palette */
+    --ccs-green: #0251B0;
+    --ccs-dark: #102A43;
+    --ccs-gold: #D1FF42;
+    --ccs-orange: #D1FF42;
+    --ccs-light: #C7D1DD;
+
+    --ccs-blue: #0251B0;
+    --ccs-lime: #D1FF42;
+    --ccs-gray: #C7D1DD;
+    --ccs-white: #FFFFFF;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 86px;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: #FFFFFF;
+    color: #102A43;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 86px;
+}
+
+::selection {
+    background: #D1FF42;
+    color: #102A43;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #102A43;
+    color: #FFFFFF;
+    padding-top: 60px;
+}
+
+/* Footer container */
+
+.footer-container {
+    width: min(1300px, 90%);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Footer logo and college name */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+/* CCS logo size */
+
+.footer-brand img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* College name */
+
+.footer-brand h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #FFFFFF;
+}
+
+/* University name */
+
+.footer-brand p {
+    margin: 0;
+
+    color: #C7D1DD;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Footer navigation */
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #C7D1DD;
+
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #D1FF42;
+}
+
+/* Footer copyright section */
+
+.footer-bottom {
+    width: min(1300px, 90%);
+    margin: 40px auto 0;
+    padding: 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    border-top: 1px solid rgba(199, 209, 221, 0.2);
+
+    color: #C7D1DD;
+    font-size: 12px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+:focus-visible {
+    outline: 3px solid #D1FF42;
+    outline-offset: 3px;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .footer-container {
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-brand img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+    .footer {
+        padding-top: 45px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        gap: 15px;
+    }
+
+    .footer-brand img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer-brand h3 {
+        font-size: 16px;
+    }
+
+    .footer-brand p {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 35px;
+        padding: 20px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* Smaller mobile screens */
+
+@media (max-width: 500px) {
+    section {
+        scroll-margin-top: 75px;
+    }
+
+    .footer-container,
+    .footer-bottom {
+        width: 88%;
+    }
+
+    .footer-brand img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-brand h3 {
+        font-size: 14px;
+    }
+
+    .footer-brand p {
+        font-size: 11px;
+    }
+}
